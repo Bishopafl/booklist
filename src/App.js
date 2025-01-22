@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const BookList = () => {
+  return <section>
+    <Book/>
+    <Book/>
+    <Book/>
+    <Book/>
+  </section>
 }
 
-export default App;
+const Book = () => {
+  return <article>
+    <Image/>
+    <Title/>
+    <Author/>
+  </article>
+}
+
+const Image = () => <img alt='Amazon book listing' src='https://images-na.ssl-images-amazon.com/images/I/81crMlhnQtL._AC_UL600_SR600,400_.jpg' />
+const Title = () => <h2>Book Title</h2>
+const Author = () => {
+  return <h4>Author</h4>
+}
+
+export default BookList;
